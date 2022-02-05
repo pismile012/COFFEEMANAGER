@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A658C508-0310-4085-8CD8-7548425E4E36}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>COFFEEMANAGER</RootNamespace>
+    <AssemblyName>COFFEEMANAGER</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BUS\AccountBUS.cs" />
+    <Compile Include="BUS\CTHDBUS.cs" />
+    <Compile Include="BUS\CUAHANGBUS.cs" />
+    <Compile Include="BUS\HOADONBUS.cs" />
+    <Compile Include="BUS\QLBan.cs" />
+    <Compile Include="BUS\QLMon.cs" />
+    <Compile Include="CreateBill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateBill.Designer.cs">
+      <DependentUpon>CreateBill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DAO\AccountDAO.cs" />
+    <Compile Include="DAO\CTHDDAO.cs" />
+    <Compile Include="DAO\CUAHANGDAO.cs" />
+    <Compile Include="DAO\MONDANHMUCDAO.cs" />
+    <Compile Include="DAO\DANHMUCDAO.cs" />
+    <Compile Include="DAO\HOADONDAO.cs" />
+    <Compile Include="DAO\Provider.cs" />
+    <Compile Include="DAO\QuanlybanDAO.cs" />
+    <Compile Include="DAO\QuanlymonDAO.cs" />
+    <Compile Include="DTO\Account.cs" />
+    <Compile Include="DTO\Ban.cs" />
+    <Compile Include="DTO\CTHD.cs" />
+    <Compile Include="DTO\CUAHANG.cs" />
+    <Compile Include="DTO\CREATEBILL.cs" />
+    <Compile Include="DTO\MONDANHMUC.cs" />
+    <Compile Include="DTO\DANHMUC.cs" />
+    <Compile Include="DTO\MAHOADON.cs" />
+    <Compile Include="DTO\HOADON.cs" />
+    <Compile Include="DTO\Mon.cs" />
+    <Compile Include="frmSuaMon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSuaMon.Designer.cs">
+      <DependentUpon>frmSuaMon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmThemBan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmThemBan.Designer.cs">
+      <DependentUpon>frmThemBan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmThemMon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmThemMon.Designer.cs">
+      <DependentUpon>frmThemMon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmXoaBan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmXoaBan.Designer.cs">
+      <DependentUpon>frmXoaBan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmXoaMon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmXoaMon.Designer.cs">
+      <DependentUpon>frmXoaMon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin.Designer.cs">
+      <DependentUpon>Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager.Designer.cs">
+      <DependentUpon>Manager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CreateBill.resx">
+      <DependentUpon>CreateBill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSuaMon.resx">
+      <DependentUpon>frmSuaMon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmThemBan.resx">
+      <DependentUpon>frmThemBan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmThemMon.resx">
+      <DependentUpon>frmThemMon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmXoaBan.resx">
+      <DependentUpon>frmXoaBan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmXoaMon.resx">
+      <DependentUpon>frmXoaMon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin.resx">
+      <DependentUpon>Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager.resx">
+      <DependentUpon>Manager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
